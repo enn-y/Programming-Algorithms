@@ -1,0 +1,201 @@
+Q1a) 
+#include <stdio.h>
+
+
+int main(){
+   i INITIALIZED AS 4.5 AND DATA TYPE IS FLOATING POINT;
+
+
+   printf("number\t\tsquare\t\tcube\n");
+
+
+   FOR(i=4.5 AND i LESS THAN OR EQUAL TO 18 AND I INCREMENT BY 4.5 EACH TIME
+       printf("%.6f\t%.6f\t%.6f\n", i, i MULTIPLY i, i MULTIPLY i MULTIPLY i);
+   }
+}
+
+//END OF CODE
+
+
+Q1b) 
+#include <stdio.h>
+
+
+int main(){
+   i INITIALIZED AS 5 AND DATA TYPE IS INTEGER;
+
+
+   printf("number\tsquare\tcube\n");
+
+
+   FOR(i=5 and i LESS THAN OR EQUAL TO 20 AND i INCREMENT BY 5 EACH TIME)
+       printf("%d\t%d\t%d\n", i, i MULTIPLY i, i MULTIPLY i MULTIPLY i);
+   }
+}
+
+
+//END OF CODE
+
+
+Q2) 
+#include <stdio.h>
+
+
+int main(){
+   INITIALIZED INT CONTROL VALUE i;
+   INITIALIZED INT CONTROL VALUE/ REPRESENTS COLUMNS j;
+   INITIALIZED INT CONTROL VALUE/ REPRESENTS SPACE k;
+   INITIALIZED INT NUMBER OF ROWS AS 10;
+
+
+   FOR (i=1 AND i SMALLER OR EQUAL TO ROWS AND i INCREMENT){
+       FOR (j=1;j SMALLER OR EQUAL TO i; j INCREMENT){
+           PRINT ASTERISK;
+       }
+       PRINT NEW LINE;
+   }
+
+
+   PRINT NEW LINE TO SEPARATE THE TRIANGLES;
+
+
+   FOR(i=ROWS AND i LARGER OR EQUAL TO 1 AND i DECREMENT);
+       FOR(j=i AND i LARGER OR EQUAL TO 0 AND j DECREMENT);
+           PRINT ASTERISK;
+       }
+       PRINT NEW LINE;
+   }
+
+
+   PRINT NEW LINE TO SEPARATE THE TRIANGLES;
+
+
+   FOR(I=1 AND I SMALLER OR EQUAL TO ROWS AND I INCREMENT);
+       FOR(k=0 AND k SMALLER THAN i AND k INCREMENT);
+           PRINT SPACE, SO LONG EDGE ON THE RIGHT SIDE;
+       }
+       FOR(j=I AND j SMALLER OR EQUAL TO ROWS AND j INCREMENT);
+           PRINT ASTERISK;
+       }
+       PRINT NEW LINE;
+   }
+
+
+   PRINT NEW LINE TO SEPARATE THE TRIANGLES;
+
+
+   FOR(i=1 AND i SMALLER OR EQUAL TO ROWS AND i INCREMENT){
+       FOR (k=i AND k SMALLER THAN ROWS AND k INCREMENT){
+           PRINT SPACE, SO LONG EDGE ON THE RIGHT SIDE;
+       }
+       FOR(j=1 AND j SMALLER OR EQUAL TO i, j INCREMENT);
+           PRINT ASTERISK;
+       }
+       PRINT NEW LINE;
+   }
+}
+
+
+Q3)
+#include <stdio.h>
+
+
+int main(){
+   INITIALISE INT DESIGNATION;
+   INITIALISE FLOAT DAYSWORKED;
+   INITIALISE FLOAT OVERTIME;
+   INITIALISE FLOAT DAILYRATE;
+   INITIALISE TOTAL AS 0;
+   INITIALISE FLOAT HOURSWORKED;
+   INITIALISE FLOAT HOURLYRATE;
+
+
+   INITIALISE FLOAT WEEKSWORKED;
+   INITIALISE FLOAT TOTALSALES;
+
+
+   INITIALISE FLOAT ITEMSPACKED;
+   INITIALISE FLOAT SUBTOTAL AS 0;
+
+
+   WHILE (DESIGNATION GREATER THAN 0 OR LESS THAN 5){
+       printf("\n\nPlease enter a number based in designation: ");
+       SCANF(INTEGER FORMAT SPECIFER, ADDRESS DESIGNATION);
+
+
+       switch(designation){
+           FIRST CASE:
+               printf("\nManager (1):\nSalary: Fixed Monthly Salary");
+               BREAK TO STOP FLOW AFTER CASE BY CASE;
+           case 2:
+               printf("\nDaily Workers (2):");
+               printf("\nDays worked this week: ");
+               SCANF(FLOATING POINT FORMAT SPECIFIER, ADDRESS DAYSWORKED)
+               while(DAYSWORKED LESS THAN 0 OR GREATER THAN 6){
+                   printf("\nInvalid value, Please enter again");
+                   printf("\nDays worked this week: ");
+                   SCANF(FLOATING POINT FORMAT SPECIFIER, ADDRESS DAYSWORKED)
+               }
+               printf("\nNumber of overtime days: ");
+               SCANF(FLOATING POINT FORMAT SPECIFIER, ADDRESS OVERTIME)
+               printf("\nDaily rate: ");
+               SCANF(FLOATING POINT FORMAT SPECIFIER, ADDRESS DAILYRATE)
+
+
+               total = DAILYRATE MULTIPLY DAYSWORKED + (OVERTIME MULTIPLY DAILYRATE MULTIPLY 2/3);
+               printf("\n\nSalary: %.2f", total);
+               BREAK TO STOP FLOW AFTER CASE BY CASE;
+           case 3:
+               printf("\nHourly Workers (3):");
+               printf("\nHours worked this week: ");
+               SCANF(FLOATING POINT FORMAT SPECIFIER, ADDRESS HOURSWORKED)
+               while(HOURSWORKED LESS THAN 0 OR GREATER THAN 50){
+                   printf("\nInvalid value, Please enter again");
+                   printf("\nHours worked this week: ");
+                   SCANF(FLOATING POINT FORMAT SPECIFIER, ADDRESS HOURSWORKED)
+               }
+               printf("Overtime hours: ");
+               SCANF(FLOATING POINT FORMAT SPECIFIER, ADDRESS OVERTIME)
+               printf("Hourly rate: ");
+               SCANF(FLOATING POINT FORMAT SPECIFIER, ADDRESS HOURLYRATE)
+              
+               total = HOURSWORKED MULTIPLY HOURLYRATE + ((OVERTIME MULTIPLY HOURLYRATE)DIVIDED BY 2);
+               printf("Salary: %.2f", total);
+               BREAK TO STOP FLOW AFTER CASE BY CASE;
+           case 4:
+               printf("\nCommission Worker (4):");
+               printf("\nWeeks worked: ");
+               SCANF(FLOATING POINT FORMAT SPECIFIER, ADDRESS WEEKSWORKED)
+
+
+               FOR(INTEGER i=1 AND I LESS OR EQUAL TO WEEKS WORKED AND i INCREMENT)
+                   printf("\nTotal sales in week - %d: ",i);
+                   SCANF(FLOATING POINT FORMAT SPECIFIER, ADDRESS TOTALSALES)
+                   subtotal PLUS AND EQUAL TO totalsales;
+               }
+
+
+               total = (230 MULTIPLY WEEKSWORKED) + (SUBTOTAL MULTIPLY 0.059);
+               printf("\nSalary: %.2f", total);
+               BREAK TO STOP FLOW AFTER CASE BY CASE;
+           case 5:
+               printf("\nLabour at product packing (5):");
+               printf("\nWeeks worked: ");
+               SCANF(FLOATING POINT FORMAT SPECIFIER, ADDRESS WEEKSWORKED)
+
+
+               FOR(INTEGER I=1 AND I LESS OR EQUAL TO WEEKS WORKED AND I INCREMENT)
+                   printf("\nItems packed in week - %d: ",i);
+                   SCANF(FLOATING POINT FORMAT SPECIFIER, ADDRESS ITEMSPACKED)
+                   subtotal PLUS AND EQUAL TO itemspacked;
+               }
+
+
+               total = subtotal MULIPLY 0.0005;
+               printf("\nSalary: %.2f", total);
+               BREAK TO STOP FLOW AFTER CASE BY CASE;
+       }
+   }
+}
+
+//END OF CODE
