@@ -1,4 +1,4 @@
-**Computer Fundamental Module**
+**Programming & Algorithms Module**
 ---
 - Within this repository includes my Programming & Algorithms Courseworks that I've completed in semester 1 in the University of Nottingham
 
